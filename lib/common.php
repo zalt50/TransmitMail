@@ -478,7 +478,7 @@ function delete_blank($s) {
 	if (is_array($s)) {
 		return array_map('delete_blank', $s);
 	}
-	return preg_replace('/\s|　/', '', $s);
+	return preg_replace('/\s/' . REG_OPTION, '', $s);
 }
 
 
